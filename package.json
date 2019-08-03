@@ -4,9 +4,15 @@
   "private": true,
   "dependencies": {
     "@callstack/react-theme-provider": "3.0.3",
+    "apollo-cache-inmemory": "1.6.2",
+    "apollo-client": "2.6.3",
+    "apollo-link-http": "1.5.15",
     "atomize": "^1.0.4",
+    "graphql-tag": "2.10.1",
     "react": "^16.8.6",
+    "react-apollo": "2.5.8",
     "react-dom": "^16.8.6",
+    "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
     "react-transition-group": "4.2.1",
     "styled-components": "4.3.2"
