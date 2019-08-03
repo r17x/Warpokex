@@ -1,27 +1,23 @@
 import React from 'react';
 import { render } from "react-dom";
 import constants from 'constants.js'
+import { ThemeProvider,  StyleReset } from 'atomize';
+import {theme} from 'theming'
+import {ApolloProvider} from 'react-apollo'
+// ApolloClient 
+import client from 'services/graph'
 import App from './App';
-import { ThemeProvider, DefaultTheme, StyleReset } from 'atomize';
 import * as serviceWorker from './serviceWorker';
 
 // create dom 
 const domElementReact = document.createElement('div')
 
-// Theme Configuration 
-const theme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    primary: 'blue',
-    accent: 'black',
-  },
-};
-
 const Application = () => (
     <ThemeProvider theme={theme}>
       <StyleReset />
+      <ApolloProvider client={client}>
       <App />
+      </ApolloProvider>
     </ThemeProvider>
 )
 

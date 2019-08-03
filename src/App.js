@@ -1,12 +1,11 @@
 import React from 'react';
 import Wrapper from 'components/Wrapper'
+import Router from 'pages/Router'
 
-function App() {
+export default function App() {
   return (
     <Wrapper>
-        Hell
+        <Router/>
     </Wrapper>
   );
 }
-
-export default App;
