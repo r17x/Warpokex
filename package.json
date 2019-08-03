@@ -1,22 +1,32 @@
 {
   "name": "warpokex",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.0.0",
-    "@testing-library/react": "^8.0.7",
+    "@callstack/react-theme-provider": "3.0.3",
+    "atomize": "^1.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "react-transition-group": "4.2.1",
+    "styled-components": "4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:staged": "cross-env CI=true react-scripts test --env=jsdom --verbose --coverage --findRelatedTests",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "globals": {
+      "render": true,
+      "cleanup": true,
+      "fireEvent": true,
+      "waitForElement": true,
+      "wait": true
+    }
   },
   "browserslist": {
     "production": [
@@ -29,5 +39,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/src/serviceWorker.js",
+      "!<rootDir>/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "4.0.0",
+    "@testing-library/react": "8.0.7"
   }
 }
