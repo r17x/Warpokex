@@ -8,16 +8,22 @@ export default function Loading({loading, duration}) {
 
     useEffect(() => {
         setInterval(setAnimate(!animate), duration) 
-    }, [animate, duration])
+    }, 
+        // eslint-disable-next-line
+    [
+    ])
 
     return(
         <Div
           h="3rem"
           w="3rem"
           m={{ b: "4rem" }}
-          rounded="lg"
-          bg="brand200"
+          rounded="circle"
+          bg="black500"
           style={{
+              position: 'absolute',
+              top: '50vh',
+              bottom: '50vh',
             transform: animate
               ? "translateX(20rem)"
               : "translateX(0)"

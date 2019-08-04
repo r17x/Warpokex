@@ -1,0 +1,359 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render Home page with the data 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa yCdlf"
+    data-testid="ListPokemon"
+  >
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/bulbasaur.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          001
+           | 
+          Bulbasaur
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa ksqsBw"
+          >
+            Grass
+          </span>
+          <span
+            class="sc-bdVaJa fNilym"
+          >
+            Poison
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/ivysaur.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          002
+           | 
+          Ivysaur
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa ksqsBw"
+          >
+            Grass
+          </span>
+          <span
+            class="sc-bdVaJa fNilym"
+          >
+            Poison
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/venusaur.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          003
+           | 
+          Venusaur
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa ksqsBw"
+          >
+            Grass
+          </span>
+          <span
+            class="sc-bdVaJa fNilym"
+          >
+            Poison
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/charmander.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          004
+           | 
+          Charmander
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa ijVPke"
+          >
+            Fire
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/charmeleon.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          005
+           | 
+          Charmeleon
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa ijVPke"
+          >
+            Fire
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/charizard.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          006
+           | 
+          Charizard
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa ijVPke"
+          >
+            Fire
+          </span>
+          <span
+            class="sc-bdVaJa bHsrMp"
+          >
+            Flying
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/squirtle.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          007
+           | 
+          Squirtle
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa LEVCA"
+          >
+            Water
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/wartortle.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          008
+           | 
+          Wartortle
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa LEVCA"
+          >
+            Water
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/blastoise.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          009
+           | 
+          Blastoise
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa LEVCA"
+          >
+            Water
+          </span>
+        </label>
+      </div>
+    </div>
+    <div
+      class="sc-EHOje gxRZMW sc-bdVaJa geNTph"
+    >
+      <div
+        class="sc-bdVaJa epdytx"
+      >
+        <img
+          class="sc-gzVnrw hWZxqh"
+          data-testid="ListPokemon.image"
+          src="https://img.pokemondb.net/artwork/caterpie.jpg"
+        />
+        <h1
+          class="sc-iwsKbI kCjaUS"
+          color="black"
+          data-testid="ListPokemon.title"
+        >
+          010
+           | 
+          Caterpie
+        </h1>
+        <label
+          class="sc-bdVaJa cmuZrv"
+          color="black"
+        >
+          <span
+            class="sc-bdVaJa fNilym"
+          >
+            Bug
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <button
+    bg="warning700"
+    class="sc-htpNat ccLvux"
+    color="white"
+    data-testid="loadMore"
+  >
+    Load More
+  </button>
+</div>
+`;

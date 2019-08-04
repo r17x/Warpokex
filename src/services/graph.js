@@ -1,13 +1,21 @@
 import { ApolloClient } from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
-import constants from 'constants' 
+import { fragmentCacheRedirect } from "apollo-link-state-fragment";
+import constants from 'constants.js' 
 
-const configLink = {
-  uri: constants.GraphAPI,
-}
+
+const configLink = new HttpLink({
+  uri: constants.graphAPI,
+})
 
 export default new ApolloClient({
-  link: new HttpLink(configLink),
-  cache: new InMemoryCache(),
+  link: configLink,
+    cache: new InMemoryCache({
+        cacheRedirects: {
+            Query: {
+                ...fragmentCacheRedirect()
+            }
+        }
+    }),
 })

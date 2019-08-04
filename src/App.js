@@ -1,11 +1,15 @@
-import React from 'react';
-import Wrapper from 'components/Wrapper'
+import React from 'react'
 import Router from 'pages/Router'
+import Wrapper from 'components/Wrapper'
+import Header from 'components/Header'
 
 export default function App() {
   return (
-    <Wrapper>
-        <Router/>
-    </Wrapper>
-  );
+    <>
+      <Header />
+      <Wrapper>
+        <Router />
+      </Wrapper>
+    </>
+  )
 }

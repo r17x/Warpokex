@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@apollo/react-hooks": "^0.1.0-beta.11",
     "@callstack/react-theme-provider": "3.0.3",
     "apollo-cache-inmemory": "1.6.2",
     "apollo-client": "2.6.3",
     "apollo-link-http": "1.5.15",
+    "apollo-link-state": "0.4.2",
+    "apollo-link-state-fragment": "0.1.5",
     "atomize": "1.0.4",
     "graphql": "14.4.2",
     "graphql-tag": "2.10.1",
@@ -26,14 +29,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app",
-    "globals": {
-      "render": true,
-      "cleanup": true,
-      "fireEvent": true,
-      "waitForElement": true,
-      "wait": true
-    }
+    "extends": "eslint-config-react-app-eslint-six"
   },
   "browserslist": {
     "production": [
@@ -58,6 +54,8 @@
     "@testing-library/jest-dom": "4.0.0",
     "@testing-library/react": "8.0.7",
     "cross-env": "5.2.0",
-    "jest-each": "24.8.0"
+    "eslint-config-react-app-eslint-six": "4.0.2",
+    "jest-each": "24.8.0",
+    "prettier": "^1.18.2"
   }
 }
