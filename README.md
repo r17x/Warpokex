@@ -1,4 +1,8 @@
 # Warpokex 
+[![codecov](https://codecov.io/gh/ri7nz/TokFractions/branch/master/graph/badge.svg)](https://codecov.io/gh/ri7nz/Warpokex) 
+[![Maintainability](https://api.codeclimate.com/v1/badges/1671a8db78546109d010/maintainability)](https://codeclimate.com/github/ri7nz/Warpokex/maintainability)
+[![Build Status](https://travis-ci.org/ri7nz/Warpokex.svg?branch=master)](https://travis-ci.org/ri7nz/Warpokex)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://ri7nz.mit-license.org/)
 
 ### Live Demo : [Coming Soon](#)
 
