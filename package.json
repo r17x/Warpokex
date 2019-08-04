@@ -3,10 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@apollo/react-hooks": "^0.1.0-beta.11",
     "@callstack/react-theme-provider": "3.0.3",
     "apollo-cache-inmemory": "1.6.2",
     "apollo-client": "2.6.3",
     "apollo-link-http": "1.5.15",
+    "apollo-link-state": "0.4.2",
+    "apollo-link-state-fragment": "0.1.5",
     "atomize": "1.0.4",
     "graphql": "14.4.2",
     "graphql-tag": "2.10.1",

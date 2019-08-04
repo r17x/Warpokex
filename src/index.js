@@ -16,7 +16,7 @@ const Application = () => (
     <ThemeProvider theme={theme}>
       <StyleReset />
       <ApolloProvider client={client}>
-      <App />
+        <App />
       </ApolloProvider>
     </ThemeProvider>
 )
