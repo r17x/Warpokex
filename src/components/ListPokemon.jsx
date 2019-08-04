@@ -32,7 +32,7 @@ export default function ListPokemon({data, onClick }) {
         <Col size={{xs: 6, md: 3 }} key={id} onClick={handleClick}>
             <Div p=".5rem" m=".5rem">
                 <Image data-testid={`${ListPokemon.name}.image`} src={image}/>
-                <Text data-testid={`${ListPokemon.name}.image`} tag="h1" color="black">
+                <Text data-testid={`${ListPokemon.name}.title`} tag="h1" color="black">
                     {number} | {name}
                 </Text>
                 <Label color="black">

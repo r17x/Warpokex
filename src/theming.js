@@ -1,6 +1,4 @@
-import {
-    DefaultTheme, 
-} from 'atomize'
+import { DefaultTheme } from 'atomize'
 
 export const theme = {
   ...DefaultTheme,
@@ -9,5 +7,5 @@ export const theme = {
     primary: 'blue',
     accent: 'black',
   },
-  transition: "transform 0.8s linear"
+  transition: 'transform 0.8s linear',
 }

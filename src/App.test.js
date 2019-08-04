@@ -1,39 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+/* global render wait fireEvent */
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
+import constants from 'constants.js'
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
-describe('User can browse pokemon in infinite list - User can view detailed information of each pokemon', () => {
-    test('ListPokemon & LoadMore button should be render & visible in container', () => {
-        const {container, getByTestId } = render(<App/>)
-        expect(container).toHaveTextContent(/loading/i)
-        const ListPokemon = getByTestId('ListPokemon') 
-        const LoadMore = getByTestId('loadMore')
-        expect(container).toContainElement(LoadMore)
-        expect(container).toContainElement(ListPokemon)
-        expect(ListPokemon).toBeVisible()
-        expect(LoadMore).toBeVisible()
-    })
-
-    test('When no connection should show no connection', async () => {
-        beforeEach(() => {
-            global.fetch = jest.fn().mockImplementation(() => {
-                throw new Error(['no Connection'])
-            }) 
-        })
-
-        const spyFetch = jest.spyOn(global, 'fetch')
-
-        const {container, getByText} = render(<App/>)
-
-        await wait(() => {
-            expect(container).toHaveTextContent(/something error/i)
-            expect(spyFetch).toHaveBeenCalledTime(1)
-        })
-    })
+  const div = document.createElement('div')
+  ReactDOM.render(<App />, div)
+  ReactDOM.unmountComponentAtNode(div)
 })
-test.todo('User can view the image of each pokemon')
-test.todo('User can filter list of pokemon based on an attribute of pokemon (feel free to choose one attribute to use for filtering i.e. nature, types)')
+
+describe('User can browse pokemon in infinite list - User can view detailed information of each pokemon', () => {
+  const setup = () => render(<App />)
+
+  test('ListPokemon & LoadMore button should be render & visible in container', async () => {
+    const { container, getByTestId } = setup()
+    expect(container).toHaveTextContent(constants.appName)
+    const ListPokemon = getByTestId('ListPokemon')
+    expect(ListPokemon).toBeEmpty()
+    expect(ListPokemon).toBeVisible()
+
+    await wait(() => {
+      expect(ListPokemon).not.toBeEmpty()
+      expect(ListPokemon.children).toHaveLength(10)
+    })
+  })
+
+  test('Infinite or Load More', async () => {
+    const { getByTestId } = setup()
+    const ListPokemon = getByTestId('ListPokemon')
+    const LoadMore = getByTestId('loadMore')
+    expect(LoadMore.disabled).toBeFalsy()
+    await wait(() => expect(ListPokemon.children).toHaveLength(10))
+    fireEvent.click(LoadMore)
+    expect(LoadMore.disabled).toBeTruthy()
+    await wait(() => {
+      expect(LoadMore.disabled).toBeFalsy()
+      expect(ListPokemon).not.toBeEmpty()
+      expect(ListPokemon.children).toHaveLength(15)
+    })
+  })
+
+  test('User can view the image of each pokemon', async () => {
+    const { queryAllByTestId } = setup()
+    await wait(() => {
+      const ImagePokemon = queryAllByTestId('ListPokemon.image')
+      expect(ImagePokemon).toHaveLength(10)
+    })
+  })
+})
+test.todo(
+  'User can filter list of pokemon based on an attribute of pokemon (feel free to choose one attribute to use for filtering i.e. nature, types)',
+)
