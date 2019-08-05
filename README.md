@@ -16,7 +16,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Note: I'm using `Yarn`.
 
-## What I'm use ? 
+## What I use ? 
 - [React.js](http://reactjs.org) (bootstrapped by [create-react-app](https://github.com/facebook/create-react-app))
 - [PokeDex Graphql](https://graphql-pokemon.now.sh/) by [@lucasbento](https://github.com/lucasbento/graphql-pokemon)
 - [Jest](http://jestjs.io/) (built-in in create-react-app)
