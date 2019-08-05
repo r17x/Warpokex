@@ -26,6 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:ci": "cross-env CI=true react-scripts test --env=jsdom --verbose --coverage ",
+    "test:lint": "eslint src/**/*.js",
+    "lint": "yarn test:lint --fix",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

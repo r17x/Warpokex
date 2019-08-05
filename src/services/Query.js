@@ -28,12 +28,11 @@ export const GET_POKEMON = gql`
         }
       }
       evolutions {
-      id
-      number
-      name
-      types
-      image
-
+        id
+        number
+        name
+        types
+        image
       }
     }
   }
