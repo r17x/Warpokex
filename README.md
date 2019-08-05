@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/ri7nz/Warpokex.svg?branch=master)](https://travis-ci.org/ri7nz/Warpokex)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://ri7nz.mit-license.org/)
 
-### Live Demo : [Coming Soon](#)
+### Live Demo : [Warpokex Live Here](https://warpokex.ri7nz.now.sh/) deployed in [Now.sh](http://now.sh)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -16,15 +16,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Note: I'm using `Yarn`.
 
-## Stack Technology
+## What I'm use ? 
 - [React.js](http://reactjs.org) (bootstrapped by [create-react-app](https://github.com/facebook/create-react-app))
+- [PokeDex Graphql](https://graphql-pokemon.now.sh/) by [@lucasbento](https://github.com/lucasbento/graphql-pokemon)
 - [Jest](http://jestjs.io/) (built-in in create-react-app)
 - [Jest-Each](https://www.npmjs.com/package/jest-each) (Tool For Jest & Testing)
 - [@testing-library/react](https://github.com/testing-library/react-testing-library) (For Test React Component)
 - [@testing-library/jest-dom](https://github.com/testing-library/jest-dom) (Jest Custom Matcher)
 - [Zeit/now](https://zeit.co/) (For Deployment & Service Integration)
 - [Dependabot](https://github.com/apps/dependabot-preview) (Dependencies secure and up to date)
-- [CodeCov](https://codecov.io/gh/ri7nz/Warpokex)
+- [CodeCov](https://codecov.io/gh/ri7nz/Warpokex) (Code Coverage & Service Integration)
 
 ## Available Scripts
 
@@ -45,7 +46,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `yarn test:ci`
 
-Use for CI `travis` integration for codecov (coverage test).
+Use for CI like `travis` for testing and integration with codecov (coverage test).
 
 ### `yarn build`
 
