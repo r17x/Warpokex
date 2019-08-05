@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render header correctly 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa AwajD"
+  >
+    <h1
+      class="sc-iwsKbI jiMShn"
+    >
+      WarPokeX
+    </h1>
+  </div>
+</div>
+`;

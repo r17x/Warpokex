@@ -9,7 +9,7 @@ export default function Routers() {
     <Router history={history}>
       <Suspense fallback={<Loading />}>
         <Route key="homepage" path="/" component={Home} exact />
-        <Route key="pokemon" path="/pokemon" component={Pokemon} exact />
+        <Route key="pokemon" path="/pokemon/:name" component={Pokemon} />
       </Suspense>
     </Router>
   )
