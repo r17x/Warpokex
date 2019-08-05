@@ -1,74 +1,106 @@
-import React, { useState, useCallback } from 'react'
-import {GET_ALL_POKEMONS, GET_POKEMON}  from 'services/Query'
+import React, { useState } from 'react'
+import { GET_ALL_POKEMONS, GET_POKEMON } from 'services/Query'
 import client from 'services/graph'
-import {useQuery} from '@apollo/react-hooks'
-import ListPokemon from 'components/ListPokemon'
-import {Button, Icon} from 'atomize'
+import { useQuery } from '@apollo/react-hooks'
+import { ListPokemon, Search } from 'components'
+import { Button } from 'atomize'
 /**
- * @todo 
+ * @todo
  * [need identifier] useApolloClient not work
+ * if fixed remove client from 'services/graph'
  */
-export default function Home(props){
-    const  {query}  = props 
-    const [first , setFirst ] = useState(10)
-    const [hasNext, setNext] = useState(true)
-    const {loading, error, data, fetchMore } = useQuery(query, {
-        client,
-        variables: {
-            first,
-        },
+export default function Home(props) {
+  const [query, setQuery] = useState(GET_ALL_POKEMONS)
+  const [variables, setVariables] = useState({ first: 10, name: '' })
+  const [search, setSearch] = useState('')
+
+  const { loading, error, data, fetchMore } = useQuery(query, {
+    client,
+    variables,
+  })
+
+  const handleItemClick = (data, e) => {
+    props.history && props.history.push(`/pokemon/${data.name}`)
+  }
+
+  const handleChange = e => {
+    e.persist()
+    setSearch(e.target.value)
+  }
+
+  const handleEnter = e => {
+    if (e.key === 'Enter') {
+      setVariables({ ...variables, name: search })
+      setQuery(
+        ['', undefined, null].includes(search) ? GET_ALL_POKEMONS : GET_POKEMON,
+      )
+    }
+  }
+
+  // console.log(data)
+  const { pokemons, pokemon } = data
+
+  const handleFetchMore = variables => {
+    // console.log(variables)
+    fetchMore({
+      variables,
+      updateQuery: (prev, { fetchMoreResult, variables }) => {
+        if (!fetchMoreResult) return prev
+        setVariables(variables)
+        return Object.assign({}, prev, {
+          pokemons: [...fetchMoreResult.pokemons],
+          pokemon: [fetchMoreResult.pokemon],
+        })
+      },
     })
+  }
 
-    const handleFetchMore = useCallback(() => {
-        fetchMore({
-            variables: {
-                first, 
-            } ,
-            updateQuery: (prev, { fetchMoreResult }) => {
-              if (!fetchMoreResult) return prev;
-              if (fetchMoreResult && fetchMoreResult.pokemons && fetchMoreResult.pokemons.length > prev.pokemons.length ) return fetchMoreResult 
-              setNext(false)
-            }
-        }) 
-    },[first, setNext, fetchMore])
+  if (error) return 'Something Wrong'
 
-    if(error) return "Something Wrong"
-
-    return (
-        <>
-        <ListPokemon data={(data && data.pokemons) || []} /> 
-              <Button
-                  data-testid="loadMore"
-                  onClick={() => {
-                            setFirst(first+5)
-                            handleFetchMore()
-                      }}
+  // console.log('current data', data)
+  return (
+    <>
+      <Search
+        isLoading={loading}
+        onKeyPress={handleEnter}
+        onChange={handleChange}
+      />
+      <ListPokemon
+        onClick={handleItemClick}
+        data={
+          pokemons
+            ? pokemons
+            : pokemon
+            ? Array.isArray(pokemon)
+              ? pokemon
+              : [pokemon]
+            : []
+        }
+      />
+      <Button
+        data-testid="loadMore"
+        onClick={e => {
+          handleFetchMore({
+            ...variables,
+            first: variables.first + 5,
+          })
+        }}
         disabled={loading}
+        isLoading={loading}
         w="100%"
         bg="warning700"
         hoverBg="warning800"
-        rounded="xs"
-        color={"white"}
-        p={{ l: "3rem", r: "2rem" }}
-        m={{ b: "2rem" }}
+        rounded="circle"
+        color={'white'}
+        p={{ l: '3rem', r: '2rem' }}
+        m={{ b: '2rem' }}
       >
-          {loading ? (
-                <Icon
-                  name={loading ? "Loading2" : "Plus"}
-                  pos="absolute"
-                  top="50%"
-                  transform="translateY(-50%)"
-                  size="18px"
-                  color={loading? "primary" : "white"}
-                  m={{ r: "0.5rem" }}
-                />
-
-          ): "Load More"}
+        {loading ? 'Loading...' : 'Load More'}
       </Button>
-        </>
-    )
+    </>
+  )
 }
 
 Home.defaultProps = {
-    query: GET_ALL_POKEMONS,
+  query: GET_ALL_POKEMONS,
 }

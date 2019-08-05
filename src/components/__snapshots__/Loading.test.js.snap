@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render loading component correctly 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa HAhlL"
+    style="position: absolute; top: 50vh; bottom: 50vh; transform: translateX(0);"
+  />
+</div>
+`;

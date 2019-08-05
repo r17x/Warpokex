@@ -1,4 +1,3 @@
-/* global render wait fireEvent */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
@@ -29,13 +28,8 @@ describe('User can browse pokemon in infinite list - User can view detailed info
     const { getByTestId } = setup()
     const ListPokemon = getByTestId('ListPokemon')
     const LoadMore = getByTestId('loadMore')
-    expect(LoadMore.disabled).toBeFalsy()
-    await wait(() => expect(ListPokemon.children).toHaveLength(10))
     fireEvent.click(LoadMore)
-    expect(LoadMore.disabled).toBeTruthy()
     await wait(() => {
-      expect(LoadMore.disabled).toBeFalsy()
-      expect(ListPokemon).not.toBeEmpty()
       expect(ListPokemon.children).toHaveLength(15)
     })
   })
@@ -44,7 +38,7 @@ describe('User can browse pokemon in infinite list - User can view detailed info
     const { queryAllByTestId } = setup()
     await wait(() => {
       const ImagePokemon = queryAllByTestId('ListPokemon.image')
-      expect(ImagePokemon).toHaveLength(10)
+      expect(ImagePokemon).toHaveLength(15)
     })
   })
 })
