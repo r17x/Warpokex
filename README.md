@@ -56,10 +56,6 @@ For test format, style & lint code with `Eslint`.
 
 Running `test:lint` for fix issue of code.
 
-### `yarn lint`
-
-
-
 ### `yarn build`
 
 Builds the app for production to the `build` folder.<br>
