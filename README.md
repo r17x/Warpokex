@@ -48,6 +48,18 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Use for CI like `travis` for testing and integration with codecov (coverage test).
 
+### `yarn test:lint`
+
+For test format, style & lint code with `Eslint`.
+
+### `yarn lint`
+
+Running `test:lint` for fix issue of code.
+
+### `yarn lint`
+
+
+
 ### `yarn build`
 
 Builds the app for production to the `build` folder.<br>
