@@ -5,7 +5,7 @@ import { fragmentCacheRedirect } from 'apollo-link-state-fragment'
 import constants from 'constants.js'
 
 const configLink = new HttpLink({
-  uri: constants.graphAPI,
+  uri: constants.graphAPI
 })
 
 export default new ApolloClient({
@@ -13,8 +13,8 @@ export default new ApolloClient({
   cache: new InMemoryCache({
     cacheRedirects: {
       Query: {
-        ...fragmentCacheRedirect(),
-      },
-    },
-  }),
+        ...fragmentCacheRedirect()
+      }
+    }
+  })
 })

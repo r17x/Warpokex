@@ -6,7 +6,7 @@ export default function Search({
   placeholder,
   onChange,
   onClickIcon,
-  onKeyPress,
+  onKeyPress
 }) {
   return (
     <Input
@@ -20,7 +20,6 @@ export default function Search({
         !isLoading && (
           <Icon
             name="Search"
-            isLoading={isLoading}
             size="20px"
             cursor="pointer"
             onClick={onClickIcon}
@@ -36,10 +35,10 @@ export default function Search({
 }
 
 Search.defaultProps = {
-  placeholder: 'Search',
+  placeholder: 'Search'
 }
 Search.propTypes = {
   placeholder: string,
   onChange: func.isRequired,
-  onClickIcon: func,
+  onClickIcon: func
 }

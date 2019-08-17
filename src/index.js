@@ -1,48 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
-import constants from 'constants.js'
-import { ThemeProvider, StyleReset } from 'atomize'
-import { theme } from 'theming'
-import { ApolloProvider } from 'react-apollo'
-// ApolloClient
-import client from 'services/graph'
-import App from './App'
+import Provider from 'Provider.jsx'
+import App from 'App.jsx'
 import * as serviceWorker from './serviceWorker'
 
 // create dom
 const domElementReact = document.createElement('div')
 
-const Application = () => (
-  <ThemeProvider theme={theme}>
-    <StyleReset />
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
-  </ThemeProvider>
+render(
+  <Provider>
+    <App />
+  </Provider>,
+  domElementReact
 )
-
-// Add profiling & trace performance
-// only development mode
-if (constants.isDevelopment) {
-  const { unstable_Profiler: Profiler } = React
-  const trace = require('scheduler/tracing').unstable_trace
-  const count = {
-    mount: 0,
-    update: 0,
-  }
-  trace('initial render', performance.now(), () => {
-    const onRender = (x, y) => {
-      count[y]++
-      console.info(x, y, count[y])
-    }
-    return render(
-      <Profiler id="Application" onRender={onRender}>
-        <Application />
-      </Profiler>,
-      domElementReact,
-    )
-  })
-} else render(<Application />, domElementReact)
 
 // inject react application to current DOM/HTML in Browser
 document.body.appendChild(domElementReact)

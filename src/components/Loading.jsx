@@ -25,7 +25,7 @@ export default function Loading({ loading, duration }) {
         position: 'absolute',
         top: '50vh',
         bottom: '50vh',
-        transform: animate ? 'translateX(20rem)' : 'translateX(0)',
+        transform: animate ? 'translateX(20rem)' : 'translateX(0)'
       }}
       transition
     />
@@ -34,10 +34,10 @@ export default function Loading({ loading, duration }) {
 
 Loading.propTypes = {
   loading: bool,
-  duration: number,
+  duration: number
 }
 
 Loading.defaultProps = {
   loading: false,
-  duration: 1000,
+  duration: 1000
 }

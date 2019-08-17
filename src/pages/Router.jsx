@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react'
 import history from 'pages/history'
 import { Router, Route } from 'react-router-dom'
-import Loading from 'components/Loading'
-import Home from './Home'
-import Pokemon from './Pokemon'
+import { Home, Pokemon } from 'pages'
+import { Loading } from 'components'
+
 export default function Routers() {
   return (
     <Router history={history}>
