@@ -5,19 +5,18 @@
   "dependencies": {
     "@apollo/react-hooks": "^3.0.0",
     "@callstack/react-theme-provider": "3.0.3",
-    "apollo-cache-inmemory": "1.6.2",
-    "apollo-client": "2.6.3",
+    "apollo-cache-inmemory": "1.6.3",
+    "apollo-client": "2.6.4",
     "apollo-link-http": "1.5.15",
     "apollo-link-state": "0.4.2",
     "apollo-link-state-fragment": "0.1.5",
-    "atomize": "1.0.6",
+    "atomize": "1.0.9",
     "graphql": "14.4.2",
     "graphql-tag": "2.10.1",
-    "react": "16.8.6",
+    "react": "^16.9.0",
     "react-apollo": "2.5.8",
-    "react-dom": "16.8.6",
+    "react-dom": "^16.9.0",
     "react-router-dom": "5.0.1",
-    "react-scripts": "3.0.1",
     "react-transition-group": "4.2.2",
     "styled-components": "4.3.2"
   },
@@ -27,8 +26,13 @@
     "test": "react-scripts test",
     "test:ci": "cross-env CI=true react-scripts test --env=jsdom --verbose --coverage ",
     "test:lint": "eslint src/**/*.js",
-    "lint": "yarn test:lint --fix",
+    "lint-staged": "lint-staged",
     "eject": "react-scripts eject"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
   },
   "eslintConfig": {
     "extends": "eslint-config-react-app-eslint-six",
@@ -45,6 +49,20 @@
     ],
     "rules": {
       "prettier/prettier": "error"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn test:ci --colors --findRelatedTests",
+      "yarn test:lint --fix",
+      "prettier --write",
+      "yarn test:ci --findRelatedTests",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   },
   "browserslist": {
@@ -69,13 +87,16 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "4.0.0",
-    "@testing-library/react": "8.0.8",
+    "@testing-library/react": "9.1.3",
     "cross-env": "5.2.0",
     "eslint-config-react-app-eslint-six": "4.0.2",
-    "eslint-plugin-jest": "22.15.0",
+    "eslint-plugin-jest": "22.15.1",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-react": "7.14.3",
-    "jest-each": "24.8.0",
-    "prettier": "^1.18.2"
+    "husky": "^3.0.3",
+    "jest-each": "24.9.0",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2",
+    "react-scripts": "3.1.1"
   }
 }

@@ -7,7 +7,7 @@ const getColor = type =>
     water: 'info',
     fire: 'danger',
     grass: 'success',
-    flying: 'warning',
+    flying: 'warning'
   }[type.toLowerCase()] || 'black')
 
 export const renderType = (type, index) => (
@@ -31,7 +31,7 @@ export const RenderItem = ({
   types,
   id,
   size,
-  handleClick = () => {},
+  handleClick = () => {}
 }) => (
   <Col
     size={size}
@@ -49,15 +49,15 @@ export const RenderItem = ({
 )
 
 RenderItem.defaultProps = {
-    size: { xs: 6, md: 3 } 
-} 
+  size: { xs: 6, md: 3 }
+}
 
 export default function ListPokemon({ data, onClick }) {
   const handleClick = (id, e) => {
     typeof onClick === 'function' && onClick(id, e)
   }
   const renderItem = ({ number, name, image, types, id }, index) => (
-    <RenderItem {...{ number, name, image, types, id, handleClick }} />
+    <RenderItem {...{ number, name, image, types, id, handleClick }} key={id} />
   )
   return (
     <Row data-testid={ListPokemon.name} p={{ xs: '.5rem', md: '1rem' }}>
@@ -67,7 +67,7 @@ export default function ListPokemon({ data, onClick }) {
 }
 
 ListPokemon.propTypes = {
-  data: array.isRequired,
+  data: array.isRequired
 }
 
 ListPokemon.RenderItem = RenderItem

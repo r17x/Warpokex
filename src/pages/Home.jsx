@@ -16,7 +16,7 @@ export default function Home(props) {
 
   const { loading, error, data, fetchMore } = useQuery(query, {
     client,
-    variables,
+    variables
   })
 
   const handleItemClick = (data, e) => {
@@ -32,7 +32,7 @@ export default function Home(props) {
     if (e.key === 'Enter') {
       setVariables({ ...variables, name: search })
       setQuery(
-        ['', undefined, null].includes(search) ? GET_ALL_POKEMONS : GET_POKEMON,
+        ['', undefined, null].includes(search) ? GET_ALL_POKEMONS : GET_POKEMON
       )
     }
   }
@@ -49,9 +49,9 @@ export default function Home(props) {
         setVariables(variables)
         return Object.assign({}, prev, {
           pokemons: [...fetchMoreResult.pokemons],
-          pokemon: [fetchMoreResult.pokemon],
+          pokemon: [fetchMoreResult.pokemon]
         })
-      },
+      }
     })
   }
 
@@ -82,7 +82,7 @@ export default function Home(props) {
         onClick={e => {
           handleFetchMore({
             ...variables,
-            first: variables.first + 5,
+            first: variables.first + 5
           })
         }}
         disabled={loading}
@@ -102,5 +102,5 @@ export default function Home(props) {
 }
 
 Home.defaultProps = {
-  query: GET_ALL_POKEMONS,
+  query: GET_ALL_POKEMONS
 }

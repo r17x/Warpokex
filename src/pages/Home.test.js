@@ -7,7 +7,7 @@ it('render Home page with the data', async () => {
   const { container, queryAllByTestId, getByTestId } = render(
     <MockedProvider mocks={mocks} addTypeName={false}>
       <Home />
-    </MockedProvider>,
+    </MockedProvider>
   )
 
   const listPokemon = getByTestId('ListPokemon')
@@ -17,7 +17,7 @@ it('render Home page with the data', async () => {
   await wait(() => {
     expect(listPokemon).not.toBeEmpty()
     expect(listPokemon.childElementCount).toBe(
-      mocks[0].result.data.pokemons.length,
+      mocks[0].result.data.pokemons.length
     )
     const pokemonImage = queryAllByTestId('ListPokemon.image')
     expect(pokemonImage).toHaveLength(mocks[0].result.data.pokemons.length)

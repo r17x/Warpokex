@@ -4,8 +4,8 @@ export default [
     request: {
       query: GET_ALL_POKEMONS,
       variables: {
-        first: 10,
-      },
+        first: 10
+      }
     },
     result: {
       data: {
@@ -16,7 +16,7 @@ export default [
             name: 'Bulbasaur',
             types: ['Grass', 'Poison'],
             image: 'https://img.pokemondb.net/artwork/bulbasaur.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMDI=',
@@ -24,7 +24,7 @@ export default [
             name: 'Ivysaur',
             types: ['Grass', 'Poison'],
             image: 'https://img.pokemondb.net/artwork/ivysaur.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMDM=',
@@ -32,7 +32,7 @@ export default [
             name: 'Venusaur',
             types: ['Grass', 'Poison'],
             image: 'https://img.pokemondb.net/artwork/venusaur.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMDQ=',
@@ -40,7 +40,7 @@ export default [
             name: 'Charmander',
             types: ['Fire'],
             image: 'https://img.pokemondb.net/artwork/charmander.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMDU=',
@@ -48,7 +48,7 @@ export default [
             name: 'Charmeleon',
             types: ['Fire'],
             image: 'https://img.pokemondb.net/artwork/charmeleon.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMDY=',
@@ -56,7 +56,7 @@ export default [
             name: 'Charizard',
             types: ['Fire', 'Flying'],
             image: 'https://img.pokemondb.net/artwork/charizard.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMDc=',
@@ -64,7 +64,7 @@ export default [
             name: 'Squirtle',
             types: ['Water'],
             image: 'https://img.pokemondb.net/artwork/squirtle.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMDg=',
@@ -72,7 +72,7 @@ export default [
             name: 'Wartortle',
             types: ['Water'],
             image: 'https://img.pokemondb.net/artwork/wartortle.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMDk=',
@@ -80,7 +80,7 @@ export default [
             name: 'Blastoise',
             types: ['Water'],
             image: 'https://img.pokemondb.net/artwork/blastoise.jpg',
-            __typename: 'Pokemon',
+            __typename: 'Pokemon'
           },
           {
             id: 'UG9rZW1vbjowMTA=',
@@ -88,10 +88,10 @@ export default [
             name: 'Caterpie',
             types: ['Bug'],
             image: 'https://img.pokemondb.net/artwork/caterpie.jpg',
-            __typename: 'Pokemon',
-          },
-        ],
-      },
-    },
-  },
+            __typename: 'Pokemon'
+          }
+        ]
+      }
+    }
+  }
 ]

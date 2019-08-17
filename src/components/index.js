@@ -1,2 +1,5 @@
 export { default as ListPokemon } from 'components/ListPokemon'
 export { default as Search } from 'components/Search'
+export { default as Wrapper } from 'components/Wrapper'
+export { default as Header } from 'components/Header'
+export { default as Loading } from 'components/Loading'
