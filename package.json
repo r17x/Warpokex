@@ -97,6 +97,6 @@
     "jest-each": "24.9.0",
     "lint-staged": "^9.4.1",
     "prettier": "^1.18.2",
-    "react-scripts": "3.1.2"
+    "react-scripts": "3.2.0"
   }
 }
