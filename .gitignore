@@ -23,3 +23,18 @@ yarn-debug.log*
 yarn-error.log*
 *.swp
 *.swp
+
+# esy
+/bin/esy
+/bin/esy.cmd
+node_modules
+/coverage
+/lib
+/_export
+/_esy
+/_build
+/_release
+/_platformrelease
+/bin/fastreplacestring
+.merlin
+*.lock
