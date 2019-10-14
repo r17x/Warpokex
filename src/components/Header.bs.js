@@ -12,10 +12,7 @@ function Header(Props) {
       textSize: 'display1',
       textColor: 'white',
       m: {
-        b: '4rem',
-        t: '0',
-        r: '0',
-        l: '0'
+        b: '4rem'
       },
       children: title
     })

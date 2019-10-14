@@ -7,7 +7,7 @@ let make = (~title: string) => {
       tag="h1"
       textColor="white"
       textSize="display1"
-      m={m(~b="4rem", ~r="0", ~t="0", ~l="0")}>
+      m={m(~b="4rem", ())}>
       title->React.string
     </Text>
   </Div>;
