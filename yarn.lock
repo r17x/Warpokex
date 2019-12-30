@@ -2208,22 +2208,13 @@
     regexpp "^3.0.0"
     tsutils "^3.17.1"
 
-"@typescript-eslint/experimental-utils@2.10.0":
+"@typescript-eslint/experimental-utils@2.10.0", "@typescript-eslint/experimental-utils@^2.5.0":
   version "2.10.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.10.0.tgz#8db1656cdfd3d9dcbdbf360b8274dea76f0b2c2c"
   integrity sha512-FZhWq6hWWZBP76aZ7bkrfzTMP31CCefVIImrwP3giPLcoXocmLTmr92NLZxuIcTL4GTEOE33jQMWy9PwelL+yQ==
   dependencies:
     "@types/json-schema" "^7.0.3"
     "@typescript-eslint/typescript-estree" "2.10.0"
-    eslint-scope "^5.0.0"
-
-"@typescript-eslint/experimental-utils@^2.5.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-2.6.0.tgz#ed70bef72822bff54031ff0615fc888b9e2b6e8a"
-  integrity sha512-34BAFpNOwHXeqT+AvdalLxOvcPYnCxA5JGmBAFL64RGMdP0u65rXjii7l/nwpgk5aLEE1LaqF+SsCU0/Cb64xA==
-  dependencies:
-    "@types/json-schema" "^7.0.3"
-    "@typescript-eslint/typescript-estree" "2.6.0"
     eslint-scope "^5.0.0"
 
 "@typescript-eslint/parser@^2.8.0":
@@ -2248,17 +2239,6 @@
     lodash.unescape "4.0.1"
     semver "^6.3.0"
     tsutils "^3.17.1"
-
-"@typescript-eslint/typescript-estree@2.6.0":
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.6.0.tgz#d3e9d8e001492e2b9124c4d4bd4e7f03c0fd7254"
-  integrity sha512-A3lSBVIdj2Gp0lFEL6in2eSPqJ33uAc3Ko+Y4brhjkxzjbzLnwBH22CwsW2sCo+iwogfIyvb56/AJri15H0u5Q==
-  dependencies:
-    debug "^4.1.1"
-    glob "^7.1.4"
-    is-glob "^4.0.1"
-    lodash.unescape "4.0.1"
-    semver "^6.3.0"
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
@@ -4962,10 +4942,10 @@ eslint-plugin-import@2.18.2:
     read-pkg-up "^2.0.0"
     resolve "^1.11.0"
 
-eslint-plugin-jest@23.1.1:
-  version "23.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.1.1.tgz#1220ab53d5a4bf5c3c4cd07c0dabc6199d4064dd"
-  integrity sha512-2oPxHKNh4j1zmJ6GaCBuGcb8FVZU7YjFUOJzGOPnl9ic7VA/MGAskArLJiRIlnFUmi1EUxY+UiATAy8dv8s5JA==
+eslint-plugin-jest@23.2.0:
+  version "23.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-23.2.0.tgz#72d9ac0421b9b6ef774bcf4783329c016ed7cd6a"
+  integrity sha512-/jbCUW+g0jejXAvsytgcNhii6uEgolt0RO2e4+mhmXybfkcram5V3XIyrHCnUsb0vCmDKgHhJ1lYSm7F3VCEDA==
   dependencies:
     "@typescript-eslint/experimental-utils" "^2.5.0"
 
