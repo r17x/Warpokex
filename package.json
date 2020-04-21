@@ -9,7 +9,7 @@
     "apollo-client": "2.6.8",
     "apollo-link-http": "1.5.17",
     "apollo-link-state": "0.4.2",
-    "apollo-link-state-fragment": "0.1.6",
+    "apollo-link-state-fragment": "0.1.7",
     "atomize": "1.0.9",
     "graphql": "14.6.0",
     "graphql-tag": "2.10.3",
