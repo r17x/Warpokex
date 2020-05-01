@@ -95,7 +95,7 @@
     "eslint-plugin-react": "7.19.0",
     "husky": "^4.2.5",
     "jest-each": "25.5.0",
-    "lint-staged": "^10.2.1",
+    "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
     "react-scripts": "3.4.1"
   }
