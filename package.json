@@ -96,7 +96,7 @@
     "husky": "^4.2.5",
     "jest-each": "26.4.2",
     "lint-staged": "^10.2.12",
-    "prettier": "^2.1.0",
+    "prettier": "^2.1.1",
     "react-scripts": "3.4.3"
   }
 }
