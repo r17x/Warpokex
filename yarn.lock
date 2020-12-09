@@ -2940,10 +2940,10 @@ apollo-link-http@1.5.17:
     apollo-link-http-common "^0.2.16"
     tslib "^1.9.3"
 
-apollo-link-state-fragment@0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/apollo-link-state-fragment/-/apollo-link-state-fragment-0.1.7.tgz#6f587acffd4f3f461767af92c6b618254adae5b7"
-  integrity sha512-bvAjBNDu+sa1U9wjxgXo5vMG8ELt+TMV0sU/6F4Y2/bQM2e4olvFmmus42+0FMxjDdEgafe0nrpE0tgmIzYJwg==
+apollo-link-state-fragment@0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/apollo-link-state-fragment/-/apollo-link-state-fragment-0.1.8.tgz#39c6174a0f7950003dab6e4b502556ed2d639493"
+  integrity sha512-8CRXbUiQbqNSCmD45CDXtLXhSQhaKPRsW+lAN1mXIsDkRCD06KpIv74gBoXKFrop7PKlHFz/5d+BUWoMVLkhbQ==
   dependencies:
     apollo-utilities "^1.0.12"
 
