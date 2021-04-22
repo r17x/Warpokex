@@ -86,7 +86,7 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "5.11.10",
+    "@testing-library/jest-dom": "5.12.0",
     "@testing-library/react": "11.2.6",
     "cross-env": "7.0.3",
     "eslint-config-react-app-eslint-six": "4.0.2",
