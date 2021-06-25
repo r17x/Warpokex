@@ -12,7 +12,7 @@
     "apollo-link-state-fragment": "0.1.8",
     "atomize": "1.0.9",
     "graphql": "14.7.0",
-    "graphql-tag": "2.12.4",
+    "graphql-tag": "2.12.5",
     "react": "^16.14.0",
     "react-apollo": "3.0.0",
     "react-dom": "^16.14.0",
